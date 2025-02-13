@@ -2,9 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <section className='footer'>
+      <img src='src/assets/image/logo-footer.svg'></img>
+      <p>© 2020 Kasa. All rights reserved</p>
+    </section>
   );
 };
 

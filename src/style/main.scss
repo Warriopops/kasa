@@ -1,6 +1,6 @@
-$primary-color: blue;
+@use "component.scss";
+@use "responsive.scss";
 
 body {
-  background-color: $primary-color;
   font-family: Arial, sans-serif;
 }

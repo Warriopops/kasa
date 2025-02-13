@@ -2,9 +2,13 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <section className='navbar'>
+      <img src='src/assets/image/logo.svg'></img>
+      <div className='about'>
+      <a href="/">Acceuil</a>
+      <a href="/">A Propos</a>
+      </div>
+    </section>
   );
 };
 
