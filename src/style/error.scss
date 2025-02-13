@@ -1,0 +1,21 @@
+.error-container{
+    color: #FF6060;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    min-height: 60vh;
+    gap: 40px;
+    h1{
+        font-size: 250px;
+        margin: 0;
+        font-weight: 700;
+    }
+    h2{
+        font-weight: 500;
+    }
+    a{
+        color: black;
+    }
+}

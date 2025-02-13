@@ -27,3 +27,28 @@
         height: auto;
     }
 }
+
+// footer
+
+.footer p{
+    @media (max-width: 620px) {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+// error page
+
+.error-container h1{
+    @media (max-width: 620px) {
+        font-size: 100px;
+    }
+}
+.error-container h2{
+    @media (max-width: 620px) {
+        font-size: 18px;
+        padding-left: 65px;
+        padding-right: 65px;
+        text-align: center;
+    }
+}
