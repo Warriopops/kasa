@@ -1,6 +1,6 @@
 // navbar
 
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,18 +8,21 @@
     padding-top: 25px;
     padding-left: 100px;
     padding-right: 100px;
-    .about{
+
+    .about {
         display: flex;
         flex-direction: row;
         gap: 57px;
-        a{
+
+        a {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: 500;
             color: black;
             font-size: 24px;
             text-decoration: none;
         }
-        a:hover{
+
+        a:hover {
             text-decoration: underline;
         }
     }
@@ -28,7 +31,7 @@
 
 // footer
 
-.footer{
+.footer {
     background-color: black;
     width: 100%;
     display: flex;
@@ -40,14 +43,50 @@
     gap: 30px;
     position: fixed;
     bottom: 0;
-    p{
+
+    p {
         color: white;
         font-size: 24px;
         font-weight: 500;
     }
-    img{
+
+    img {
         width: 140px;
         color: white;
         height: auto;
     }
+}
+
+
+// banner
+
+.banner {
+    margin-top: 50px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.banner h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 48px;
 }
