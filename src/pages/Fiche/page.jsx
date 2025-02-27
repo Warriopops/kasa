@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
 import CarrouselLogement from '../../components/CarrouselLogement';
 import PictureLogement from '../../components/PictureLogement';
 import TagLogement from '../../components/TagLogement';
@@ -13,12 +12,10 @@ const FicheLogement = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		console.log("params.id", params.id)
 		const getData = async () => {
 			try {
-				const res = await axios.get("../src/data/db.json");
-				const picked = res.data.find(({ id }) => id === String(params.id));
-				console.log("picked", picked)
+				const res = await fetch("../src/data/db.json").then(response => response.json());
+				const picked = res.find(({ id }) => id === String(params.id));
 				setPickedAppart(picked);
 				if (!picked) {
 					navigate("/404", { state: { message: "Can't get data" } });

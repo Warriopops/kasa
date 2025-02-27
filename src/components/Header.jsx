@@ -1,12 +1,14 @@
 import React from 'react';
+import Logo from "/src/assets/image/logo.svg"
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <section className='navbar'>
-      <a href="/"><img src='src/assets/image/logo.svg'></img></a>
+      <Link to="/"><img src={Logo}></img></Link>
       <div className='about'>
-      <a href="/">Acceuil</a>
-      <a href="/about">A Propos</a>
+      <Link to="/">Accueil</Link>
+      <Link to="/about">A propos</Link>
       </div>
     </section>
   );

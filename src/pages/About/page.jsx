@@ -1,11 +1,12 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import Carrousel from '../../components/Carrousel';
+import BannerImg from "/src/assets/image/banner-about.png"
 
 const About = () => {
   return (
     <div className='about-page'>
-      <Banner backgroundImage={"src/assets/image/banner-about.png"}/>
+      <Banner backgroundImage={BannerImg}/>
       <Carrousel title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifies par nos équipes."/>
       <Carrousel title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme"/>
       <Carrousel title="Service" content="La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hotes ou nos locataires, soit empreinte de respect et de bienveillance."/>
