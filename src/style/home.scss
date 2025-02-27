@@ -1,0 +1,13 @@
+.home {
+    margin-top: 50px;
+}
+
+.cards-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px 0px;
+    padding: 50px;
+    justify-content: space-around;
+    background-color: #ececec;
+}

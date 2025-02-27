@@ -41,9 +41,8 @@
     height: 159px;
     padding-top: 50px;
     gap: 30px;
-    position: fixed;
     bottom: 0;
-
+    margin-top: 25vh;
     p {
         color: white;
         font-size: 24px;
@@ -57,11 +56,10 @@
     }
 }
 
-
 // banner
 
 .banner {
-    margin-top: 50px;
+    margin-bottom: 30px;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -70,6 +68,12 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    h1{
+        position: relative;
+        z-index: 2;
+        color: white;
+        font-size: 48px;
+    }
 }
 
 .banner::before {
@@ -84,9 +88,260 @@
     z-index: 1;
 }
 
-.banner h1 {
+
+// card
+
+.card-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 25vw;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    h1{
+        position: absolute;
+        padding-left: 10px;
+        z-index: 2;
+        color: white;
+        bottom: 0;
+    }
+}
+
+
+.card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 25px;
+    z-index: 1;
+}
+
+// Carrousel
+
+.carrousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrousel-container h2 {
+    background-color: #FF6060;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 28px;
+}
+
+.carrousel-container p {
+    background-color: #ececec;
+    color: black;
+    padding: 10px;
+    padding-top: 20px;
+    margin-top: -10px;
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    font-size: 24px;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.content.show {
+    max-height: 1500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+.chevron {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.rotate {
+    transform: rotate(0deg);
+}
+
+// Carrousel logement
+
+#carrousel-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 50px;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider img{
+    width: 100vw;
+}
+
+.active-anim {
+    opacity: 1;
+}
+.rightArrow, .leftArrow{
+    z-index: 99;
+    cursor: pointer;
+    width: 100px;
+    position: absolute;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+.rightArrow{
+    right: 0;
+}
+.leftArrow{
+    left: 0;
+}
+.slider-number{
+    position: absolute;
+    z-index: 9999;
+    align-items:end;
+    bottom: 10px;
+    left: 50%;
     color: white;
-    font-size: 48px;
+}
+.picked-appart-title h2{
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 10px;
+}
+.picked-appart-title p{
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+// Picture logement
+#picture-container{
+    display: flex;
+}
+
+#picture-container p{
+    color: #FF6060;
+    text-align: end;
+    font-weight: 500;
+}
+
+.host-picture{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.picked-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+// Tag 
+.tag-and-rate{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#tags-container{
+    display: flex;
+    gap: 25px;
+}
+
+#tags-container span{
+    color: white;
+    background-color: #FF6060;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 20px;
+}
+
+// Rating
+
+#rating-container {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 40px;
+}
+
+.filled {
+    color: #FF6060;
+}
+
+.empty {
+    color: lightgray;
+}
+
+// Category
+
+.category-page-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.category-container {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-container h2 {
+    background-color: #FF6060;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 28px;
+}
+
+.category-container p, ul {
+    background-color: #ececec;
+    color: black;
+    padding: 10px;
+    padding-top: 50px;
+    margin-top: -10px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
 }
